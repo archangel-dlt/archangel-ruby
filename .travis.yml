@@ -3,3 +3,11 @@ rvm:
 - 2.4.1
 sudo: false
 cache: bundler
+deploy:
+  provider: rubygems
+  api_key:
+    secure: rYHaJA2ZbA4dY40H+YnRnCDkOEHQJG/cX4CjkdB3iH58lfwYbieYqpZdHejZlu8l9oAeOEgxx9A0J4tYmd627+GJM8CRCaPWqIvjHA6Jj/FlERuaWY9bv7qM81Keg2ieEaaMt4V0yViSwO+KUEwQvrJbyNW4dSA7zevowWB2oe2j5XXKjAELUv+mO72jpphsdkpaBwEn6X5wtVJlZBbOCZj0dYFA7zml/ouKzDVAObO8d5UCrxaJflYCeQW44558t61oo64ulcF7OmeD3izDgn4hLJd31M+zsN8BBGSpT78vGceeeHwIAmugXIn0g1QXeEATAGcdmwAfE8Eqd0rLAHaz6Q1bHTItphX5RXO4HsHL5+Dbq3TSkxIHhEDHOetsIFh91ECiT23fH/jnK8fpB6iJaeVxcpB4IFgJ2eONNqTwyFdIFmYZIfFlI0OrTHPTAATHwJNkf6LlUdlALtU5VwdHisr1kaZfWN2NULHoZGBRFC1L4ToRoZwUH8elTNqtoBU2FPdDTsP9gH2XvKH+TpaFSe8NpMHH3lf+dLfckqofXkIIWk2sB/awRZg6XLd8Ib3AjrtVs6w9qTLjJfXZb0FrJlq6WYTyVfwRg9VKx9A8/1L/0Utog/qxYqCnaIRSQhMWy/v+tuH2SN3aZZZLOmVI+VM5B+R0tP0andCh0zE=
+  gem: archangel
+  on:
+    tags: true
+    repo: archangel-dlt/archangel-ruby
