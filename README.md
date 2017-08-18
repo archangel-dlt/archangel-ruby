@@ -1,5 +1,11 @@
 # Archangel
 
+[![Build Status](http://img.shields.io/travis/archangel-dlt/archangel-ruby.svg?style=flat-square)](https://travis-ci.org/archangel-dlt/archangel-ruby)
+[![Dependency Status](http://img.shields.io/gemnasium/archangel-dlt/archangel-ruby.svg?style=flat-square)](https://gemnasium.com/archangel-dlt/archangel-ruby)
+[![Code Climate](http://img.shields.io/codeclimate/github/archangel-dlt/archangel-ruby.svg?style=flat-square)](https://codeclimate.com/github/archangel-dlt/archangel-ruby)
+[![Gem Version](http://img.shields.io/gem/v/archangel.svg?style=flat-square)](https://rubygems.org/gems/archangel)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://archangel-dlt.mit-license.org)
+
 A Ruby client library and command-line interface for the Archangel DLT system.
 
 ## Installation
