@@ -1,5 +1,11 @@
 require "archangel/version"
+require "archangel/driver/base"
+require "archangel/driver/filesystem"
 
 module Archangel
-  # Your code goes here...
+  
+  def self.new(driver, options = {})
+    driver.new(options)
+  end
+  
 end
