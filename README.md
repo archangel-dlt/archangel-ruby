@@ -26,7 +26,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can store data using the command-line client:
+
+```
+bundle exec archangel store {id} {payload}
+```
+
+Currently this will store the payload string into Archangel (based on the ID and current time) using the dummy filesystem driver. Future versions will support richer data and more backend drivers.
 
 ## Development
 
