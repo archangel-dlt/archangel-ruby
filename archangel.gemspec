@@ -6,6 +6,7 @@ require "archangel/version"
 Gem::Specification.new do |spec|
   spec.name          = "archangel"
   spec.version       = Archangel::VERSION
+  spec.licenses      = ['MIT']
   spec.authors       = ["James Smith"]
   spec.email         = ["james@floppy.org.uk"]
 
