@@ -12,6 +12,6 @@ RSpec.describe Archangel do
 
   it "stores a id:payload pair" do
     driver = Archangel::Driver::Filesystem.new()
-    driver.store(test_id, timestamp, test_payload)
+    driver.store(test_id, test_payload, timestamp)
   end
 end
