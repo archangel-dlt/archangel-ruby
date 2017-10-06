@@ -12,6 +12,10 @@ module Archangel
         raise_error
       end
 
+      def fetch(id)
+        raise_error
+      end
+
       private
 
       def raise_error

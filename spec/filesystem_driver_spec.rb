@@ -9,7 +9,7 @@ RSpec.describe Archangel::Driver::Filesystem do
 
   data = [
     ["fish", "halibut", now],
-    ["fruit", "pomelo", now],
+    ["fruit", "pomelo", DateTime.parse("2011-03-11 12:34:09")],
     ["corn-based-snack", "frazzles", now]
   ]
 
@@ -22,13 +22,26 @@ RSpec.describe Archangel::Driver::Filesystem do
   end
 
   it "stores id:payload pairs" do
+    driver = Archangel::Driver::Filesystem.new({root: filestore})
+
     data.each do |id, payload, timestamp|
       count = filecount(filestore)
 
-      driver = Archangel::Driver::Filesystem.new({root: filestore})
       driver.store(id, payload, timestamp)
 
-      expect(filecount(filestore)).to be count+1
+      expect(filecount(filestore)).to eq count+1
+    end
+  end
+
+  it "fetches payload given id" do
+    driver = Archangel::Driver::Filesystem.new({root: filestore})
+
+    data.each do |id, payload, timestamp|
+      read = driver.fetch(id)
+
+      expect(read["id"]).to eq id
+      expect(read["payload"]).to eq payload
+      expect(read["timestamp"]).to eq timestamp.iso8601
     end
   end
 end

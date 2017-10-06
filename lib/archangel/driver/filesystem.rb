@@ -25,6 +25,13 @@ module Archangel
         end
       end
 
+      def fetch(id)
+        Dir["#{@root}/*.json"].each do |file|
+          data = JSON.parse(File.read(file))
+          break data if data["id"] == id
+        end
+      end
+
     end
 
   end
