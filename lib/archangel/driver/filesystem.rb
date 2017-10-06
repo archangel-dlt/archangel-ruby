@@ -7,14 +7,15 @@ module Archangel
 
     class Filesystem < Base
 
-      def initialize(options = {})
+      def initialize(options = {root: "."})
+        @root = options[:root]
       end
 
       def store(id, payload, timestamp)
         # Hash ID and time
         filename =  Digest::SHA256.hexdigest("#{id}-#{timestamp}")+".json"
         # Write payload to file
-        File.open(filename, "w") do |f|
+        File.open("#{@root}/#{filename}", "w") do |f|
           output = {
             "id" => id,
             "timestamp" => timestamp.iso8601,
