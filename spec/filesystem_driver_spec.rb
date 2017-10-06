@@ -4,8 +4,14 @@ require "date"
 RSpec.describe Archangel::Driver::Filesystem do
   test_id = "fish"
   test_payload = "halibut"
-  timestamp = DateTime.now
+  now = DateTime.now
   filestore = "./test_run"
+
+  data = [
+    ["fish", "halibut", now],
+    ["fruit", "pomelo", now],
+    ["corn-based-snack", "frazzles", now]
+  ]
 
   before :context do
     FileUtils.mkdir(filestore)
@@ -15,13 +21,15 @@ RSpec.describe Archangel::Driver::Filesystem do
     FileUtils.remove_dir(filestore)
   end
 
-  it "stores a id:payload pair" do
-    count = filecount(filestore)
+  it "stores id:payload pairs" do
+    data.each do |id, payload, timestamp|
+      count = filecount(filestore)
 
-    driver = Archangel::Driver::Filesystem.new({root: filestore})
-    driver.store(test_id, test_payload, timestamp)
+      driver = Archangel::Driver::Filesystem.new({root: filestore})
+      driver.store(id, payload, timestamp)
 
-    expect(filecount(filestore)).to be count+1
+      expect(filecount(filestore)).to be count+1
+    end
   end
 end
 
