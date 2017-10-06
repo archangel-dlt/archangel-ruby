@@ -2,8 +2,6 @@ require "spec_helper"
 require "date"
 
 RSpec.describe Archangel::Driver::Filesystem do
-  test_id = "fish"
-  test_payload = "halibut"
   now = DateTime.now
   filestore = "./test_run"
 
