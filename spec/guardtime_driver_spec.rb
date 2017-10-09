@@ -2,8 +2,6 @@ require "spec_helper"
 require "date"
 
 RSpec.describe Archangel::Driver::Guardtime do
-  username = ENV
-
   username = ENV['GUARDTIME_user']
   password = ENV['GUARDTIME_password']
   now = DateTime.now
