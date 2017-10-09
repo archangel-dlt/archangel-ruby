@@ -1,7 +1,7 @@
 require "spec_helper"
 require "date"
 
-RSpec.describe Archangel::Driver::Guardtime do
+RSpec.shared_examples "Guardtime" do |gt_driver|
   username = ENV['GUARDTIME_user']
   password = ENV['GUARDTIME_password']
   now = DateTime.now
@@ -19,11 +19,10 @@ RSpec.describe Archangel::Driver::Guardtime do
     end
   end
 
-
   it "stores id:payload pairs" do
     skip "No Guardtime credentials available" if not username
 
-    driver = Archangel::Driver::Guardtime.new(
+    driver = gt_driver.new(
       {
         :username => username,
         :password => password
@@ -38,7 +37,7 @@ RSpec.describe Archangel::Driver::Guardtime do
   it "fetches payload given id" do
     skip "No Guardtime credentials available" if not username
 
-    driver = Archangel::Driver::Guardtime.new(
+    driver = gt_driver.new(
       {
         :username => username,
         :password => password
@@ -53,7 +52,12 @@ RSpec.describe Archangel::Driver::Guardtime do
       expect(read["timestamp"]).to eq timestamp.iso8601
     end
   end
+end
 
+[ Archangel::Driver::Guardtime, Archangel::Driver::GuardtimeV2 ].each do |gt_class|
+  RSpec.describe gt_class do
+    include_examples "Guardtime", gt_class
+  end
 end
 
 def epoch_ms
