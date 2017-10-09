@@ -20,7 +20,7 @@ RSpec.describe Archangel::Driver::Filesystem do
   end
 
   it "stores id:payload pairs" do
-    driver = Archangel::Driver::Filesystem.new({"root" => filestore})
+    driver = Archangel::Driver::Filesystem.new({:root => filestore})
 
     data.each do |id, payload, timestamp|
       count = filecount(filestore)
@@ -32,7 +32,7 @@ RSpec.describe Archangel::Driver::Filesystem do
   end
 
   it "fetches payload given id" do
-    driver = Archangel::Driver::Filesystem.new({"root" => filestore})
+    driver = Archangel::Driver::Filesystem.new({:root => filestore})
 
     data.each do |id, payload, timestamp|
       read = driver.fetch(id)
