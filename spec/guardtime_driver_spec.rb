@@ -27,8 +27,8 @@ RSpec.describe Archangel::Driver::Guardtime do
 
     driver = Archangel::Driver::Guardtime.new(
       {
-        "username" => username,
-        "password" => password
+        :username => username,
+        :password => password
       }
     )
 
@@ -42,8 +42,8 @@ RSpec.describe Archangel::Driver::Guardtime do
 
     driver = Archangel::Driver::Guardtime.new(
       {
-        "username" => username,
-        "password" => password
+        :username => username,
+        :password => password
       }
     )
 
