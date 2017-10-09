@@ -1,6 +1,7 @@
 require 'digest'
 require 'rest-client'
 require 'json'
+require 'archangel/driver/base'
 
 module Archangel
   module Driver

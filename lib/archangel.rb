@@ -1,8 +1,7 @@
-require "archangel/version"
-require "archangel/driver/base"
-require "archangel/driver/filesystem"
-require "archangel/driver/guardtime"
-require "archangel/driver/guardtimeV2"
+require 'archangel/version'
+require 'archangel/driver/filesystem'
+require 'archangel/driver/guardtime'
+require 'archangel/driver/guardtimeV2'
 
 module Archangel
 

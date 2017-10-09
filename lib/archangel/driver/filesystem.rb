@@ -1,5 +1,6 @@
 require 'json'
 require 'digest'
+require 'archangel/driver/base'
 
 module Archangel
 
