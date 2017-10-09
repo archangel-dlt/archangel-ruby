@@ -45,6 +45,26 @@ module Archangel
         )
       end
 
+      def fetch(id)
+        id_search_response = RestClient::Request.execute(
+          :method => :get,
+          :url => "#{@guardtime_url}?metadata.id=#{id}",
+          :user => @username,
+          :password => @password,
+          :headers => { :accept => :json, :content_type => :json }
+        )
+
+        results = JSON.parse(id_search_response.to_str)
+        result_count = results['content'] ? results['content'].length : 0
+        if (result_count == 0)
+          raise "No results found for #{id}"
+        end
+        if (result_count > 1)
+          raise "Multiple results found for #{id}"
+        end
+
+        results['content'][0]['metadata']
+      end
     end
 
   end
