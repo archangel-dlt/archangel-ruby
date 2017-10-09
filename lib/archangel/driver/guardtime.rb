@@ -35,26 +35,12 @@ module Archangel
             :level => 0
           }
 
-        response = RestClient::Request.execute(
-          :method => :post,
-          :url => @guardtime_url,
-          :user => @username,
-          :password => @password,
-          :headers => { :accept => :json, :content_type => :json },
-          :payload => request_body.to_json
-        )
-      end
+        gt_write(request_body)
+      end # store
 
       def fetch(id)
-        id_search_response = RestClient::Request.execute(
-          :method => :get,
-          :url => "#{@guardtime_url}?metadata.id=#{id}",
-          :user => @username,
-          :password => @password,
-          :headers => { :accept => :json, :content_type => :json }
-        )
+        results = gt_search(id)
 
-        results = JSON.parse(id_search_response.to_str)
         result_count = results['content'] ? results['content'].length : 0
         if (result_count == 0)
           raise "No results found for #{id}"
@@ -64,9 +50,30 @@ module Archangel
         end
 
         results['content'][0]['metadata']
+      end # fetch
+
+      private
+      def gt_search(id)
+        gt(:get, "?metadata.id=#{id}", nil)
+      end # gt_search
+
+      def gt_write(gt_payload)
+        gt(:post, nil, gt_payload.to_json)
+      end # gt_write
+
+      def gt(method, params, payload)
+        resp = RestClient::Request.execute(
+          :method => method,
+          :url => "#{@guardtime_url}#{params}",
+          :user => @username,
+          :password => @password,
+          :headers => { :accept => :json, :content_type => :json },
+          :payload => payload
+        )
+        JSON.parse(resp.to_str)
       end
-    end
+    end # Guardtime
 
-  end
+  end # Driver
 
-end
+end # Archangel
