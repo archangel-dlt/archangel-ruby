@@ -2,14 +2,14 @@ require 'archangel/driver/guardtime_base'
 
 module Archangel
   module Driver
-    class Guardtime < GuardtimeBase
+    class GuardtimeV2 < GuardtimeBase
       def initialize(options = {
                        :username => nil,
                        :password => nil
                      })
         super(
           options,
-          'https://tryout-catena-db.guardtime.net/api/v1/signatures'
+          'https://tryout-catena-db.guardtime.net/api/v2/signatures'
         )
       end
 
@@ -18,9 +18,9 @@ module Archangel
       end # store
 
       def fetch(id)
-        results = gt_search(id)
+        gt_ids = gt_search(id)
 
-        result_count = results['content'] ? results['content'].length : 0
+        result_count = gt_ids['ids'] ? gt_ids['ids'].length : 0
         if (result_count == 0)
           raise "No results found for #{id}"
         end
@@ -28,8 +28,14 @@ module Archangel
           raise "Multiple results found for #{id}"
         end
 
-        results['content'][0]['metadata']
+        result = gt_fetch(gt_ids['ids'][0])
+        result['metadata']
       end # fetch
+
+      private
+      def gt_fetch(gt_id)
+        gt_get("/#{gt_id}")
+      end
     end # Guardtime
   end # Driver
 end # Archangel
