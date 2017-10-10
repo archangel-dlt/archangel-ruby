@@ -9,6 +9,16 @@ use_vcr = !username
 username ||= "username"
 password ||= "password"
 
+if use_vcr
+  print "Using VCR for Guardtime tests ...\n"
+  VCR.configure do |config|
+    config.cassette_library_dir = "spec/vcr_cassettes"
+    config.allow_http_connections_when_no_cassette = true
+    config.hook_into :webmock
+    config.configure_rspec_metadata!
+  end
+end
+
 RSpec.shared_examples "GuardTime" do |gt_driver|
   drivername = gt_driver.name.split('::').last
 
