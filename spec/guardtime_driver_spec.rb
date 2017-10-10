@@ -1,27 +1,32 @@
 require "spec_helper"
 require "date"
 
-RSpec.shared_examples "Guardtime" do |gt_driver|
-  username = ENV['GUARDTIME_user']
-  password = ENV['GUARDTIME_password']
-  now = DateTime.now
+username = ENV['GUARDTIME_user']
+password = ENV['GUARDTIME_password']
+
+use_vcr = !username
+
+username ||= "username"
+password ||= "password"
+
+RSpec.shared_examples "GuardTime" do |gt_driver|
+  drivername = gt_driver.name.split('::').last
 
   data = [
-    ["fish", "halibut", now],
+    ["fish", "halibut", DateTime.parse("2016-11-02 10:12:59")],
     ["fruit", "pomelo", DateTime.parse("2011-03-11 12:34:09")],
-    ["corn-based-snack", "frazzles", now]
+    ["corn-based-snack", "frazzles", DateTime.parse("2015-12-12 12:00:00")]
   ]
 
   before :context do
-    # For this test to be 'realistic', our ids need to be unique across time
+    annotation = use_vcr ? drivername : epoch_ms
     data.map do |item|
-      item[0] = "#{item[0]}-#{epoch_ms}"
+      item[0] = "#{item[0]}-#{annotation}"
     end
   end
 
-  it "stores id:payload pairs" do
-    skip "No Guardtime credentials available" if not username
 
+  it "stores id:payload pairs", :vcr => { :cassette_name => "#{drivername}-store" } do
     driver = gt_driver.new(
       {
         :username => username,
@@ -34,9 +39,7 @@ RSpec.shared_examples "Guardtime" do |gt_driver|
     end
   end
 
-  it "fetches payload given id" do
-    skip "No Guardtime credentials available" if not username
-
+  it "fetches payload given id", :vcr => { :cassette_name => "#{drivername}-fetch" } do
     driver = gt_driver.new(
       {
         :username => username,
@@ -55,8 +58,8 @@ RSpec.shared_examples "Guardtime" do |gt_driver|
 end
 
 [ Archangel::Driver::Guardtime, Archangel::Driver::GuardtimeV2 ].each do |gt_class|
-  RSpec.describe gt_class do
-    include_examples "Guardtime", gt_class
+  RSpec.describe gt_class.name do
+    include_examples "GuardTime", gt_class
   end
 end
 
