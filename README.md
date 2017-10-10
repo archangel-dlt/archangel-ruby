@@ -26,13 +26,29 @@ Or install it yourself as:
 
 ## Usage
 
-You can store data using the command-line client:
+You can store and fetch data using the command-line client:
 
-```
+``` sh
 bundle exec archangel store {id} {payload}
 ```
 
-Currently this will store the payload string into Archangel (based on the ID and current time) using the dummy filesystem driver. Future versions will support richer data and more backend drivers.
+``` sh
+bundle exec archangel fetch {id}
+```
+
+Currently this will store the payload string into Archangel (based on the ID and current time) using the dummy filesystem driver. A simple driver for Guardtime's Catena DB is also available.  Future versions will support richer data and more backend drivers.
+
+``` sh
+Commands:
+  archangel store ID PAYLOAD  # stores PAYLOAD for ID at the current time
+  archangel fetch ID          # retrieves the PAYLOAD previously stored with ID
+
+Options:
+  [--driver=DRIVER]      # Backend driver to use [file|guardtime]. Defaults to file
+  [--username=USERNAME]  # Guardtime username
+  [--password=PASSWORD]  # Guardtime password
+  [--dir=DIR]            # File storage root directory
+```
 
 ## Development
 
