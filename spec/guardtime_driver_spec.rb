@@ -5,6 +5,7 @@ username = ENV['GUARDTIME_user']
 password = ENV['GUARDTIME_password']
 
 use_vcr = !username
+tag = use_vcr ? "(VCR)" : ""
 
 username ||= "username"
 password ||= "password"
@@ -36,7 +37,7 @@ RSpec.shared_examples "GuardTime" do |gt_driver|
   end
 
 
-  it "stores id:payload pairs", :vcr => { :cassette_name => "#{drivername}-store" } do
+  it "stores id:payload pairs #{tag}", :vcr => { :cassette_name => "#{drivername}-store" } do
     driver = gt_driver.new(
       {
         :username => username,
@@ -49,7 +50,7 @@ RSpec.shared_examples "GuardTime" do |gt_driver|
     end
   end
 
-  it "fetches payload given id", :vcr => { :cassette_name => "#{drivername}-fetch" } do
+  it "fetches payload given id #{tag}", :vcr => { :cassette_name => "#{drivername}-fetch" } do
     driver = gt_driver.new(
       {
         :username => username,
