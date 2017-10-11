@@ -10,13 +10,13 @@ RSpec.shared_examples "a storage backend" do
     ]
   }
 
-  it "stores id:payload pairs", :vcr => { :cassette_name => "#{@cassette_name}-store" } do
+  it "stores id:payload pairs" do
     data.each do |id, payload, timestamp|
       driver.store(id, payload, timestamp)
     end
   end
 
-  it "fetches payload given id", :vcr => { :cassette_name => "#{@cassette_name}-fetch" } do
+  it "fetches payload given id" do
     data.each do |id, payload, timestamp|
       read = driver.fetch(id)
 

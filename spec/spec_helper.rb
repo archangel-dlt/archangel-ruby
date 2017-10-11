@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "archangel"
 require "vcr"
+require "storage_driver_examples"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -11,5 +12,15 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/vcr_cassettes"
+  config.allow_http_connections_when_no_cassette = true
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.before_record do |i|
+    i.request.headers.delete('Authorization')
   end
 end
