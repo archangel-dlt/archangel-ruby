@@ -1,5 +1,4 @@
-require "spec_helper"
-require "date"
+require "storage_driver_spec"
 require "securerandom"
 
 username = ENV['GUARDTIME_user']
@@ -23,56 +22,22 @@ if use_vcr
   end
 end
 
-RSpec.shared_examples "GuardTime" do |gt_driver|
-  drivername = gt_driver.name.split('::').last
-
-  data = [
-    ["fish", "halibut", DateTime.parse("2016-11-02 10:12:59")],
-    ["fruit", "pomelo", DateTime.parse("2011-03-11 12:34:09")],
-    ["corn-based-snack", "frazzles", DateTime.parse("2015-12-12 12:00:00")]
-  ]
-
-  before :context do
-    annotation = use_vcr ? drivername : SecureRandom.hex(10)
-    data.map do |item|
-      item[0] = "#{item[0]}-#{annotation}"
-    end
-  end
-
-
-  it "stores id:payload pairs #{tag}", :vcr => { :cassette_name => "#{drivername}-store" } do
-    driver = gt_driver.new(
-      {
-        :username => username,
-        :password => password
-      }
-    )
-
-    data.each do |id, payload, timestamp|
-      driver.store(id, payload, timestamp)
-    end
-  end
-
-  it "fetches payload given id #{tag}", :vcr => { :cassette_name => "#{drivername}-fetch" } do
-    driver = gt_driver.new(
-      {
-        :username => username,
-        :password => password
-      }
-    )
-
-    data.each do |id, payload, timestamp|
-      read = driver.fetch(id)
-
-      expect(read["id"]).to eq id
-      expect(read["payload"]).to eq payload
-      expect(read["timestamp"]).to eq timestamp.iso8601
-    end
-  end
-end
-
 [ Archangel::Driver::Guardtime, Archangel::Driver::GuardtimeV2 ].each do |gt_class|
-  RSpec.describe gt_class.name do
-    include_examples "GuardTime", gt_class
+  name = gt_class.name.split('::').last
+  annotation = use_vcr ? name : SecureRandom.hex(10)
+
+  RSpec.describe "#{gt_class.name} #{tag}" do
+    @cassette_name = name
+    include_examples "a storage backend" do
+      let(:driver) {
+        gt_class.new(
+          {
+            :username => username,
+            :password => password
+          }
+        )
+      }
+      let(:annotation) { annotation }
+    end
   end
 end
