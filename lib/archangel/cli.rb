@@ -3,7 +3,7 @@ require "archangel"
 require "date"
 
 class ArchangelCLI < Thor
-  class_option :driver, :desc => 'Backend driver to use [file|guardtime]. Defaults to file'
+  class_option :driver, :desc => 'Backend driver to use [file|guardtime|ethereum]. Defaults to file'
   class_option :username, :desc => 'Guardtime username'
   class_option :password, :desc => 'Guardtime password'
   class_option :dir, :desc => 'File storage root directory'
@@ -36,6 +36,8 @@ class ArchangelCLI < Thor
         Archangel::Driver::Filesystem
       when /^guardtime$/i
         Archangel::Driver::GuardtimeV2
+      when /^ethereum$/i
+        Archangel::Driver::EtherStore
       when nil
         Archangel::Driver::Filesystem
       else
