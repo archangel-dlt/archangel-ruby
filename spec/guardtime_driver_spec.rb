@@ -1,5 +1,6 @@
 require "spec_helper"
 require "date"
+require "securerandom"
 
 username = ENV['GUARDTIME_user']
 password = ENV['GUARDTIME_password']
@@ -32,7 +33,7 @@ RSpec.shared_examples "GuardTime" do |gt_driver|
   ]
 
   before :context do
-    annotation = use_vcr ? drivername : epoch_ms
+    annotation = use_vcr ? drivername : SecureRandom.hex(10)
     data.map do |item|
       item[0] = "#{item[0]}-#{annotation}"
     end
@@ -74,9 +75,4 @@ end
   RSpec.describe gt_class.name do
     include_examples "GuardTime", gt_class
   end
-end
-
-def epoch_ms
-  epoch_seconds = Time.now.to_f
-  epoch_ms = (epoch_seconds * 1000).to_i
 end
