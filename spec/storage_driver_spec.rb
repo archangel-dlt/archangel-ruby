@@ -20,6 +20,7 @@ RSpec.shared_examples "a storage backend" do
     data.each do |id, payload, timestamp|
       read = driver.fetch(id)
 
+      expect(read).to_not be_nil
       expect(read["id"]).to eq id
       expect(read["payload"]).to eq payload
       expect(read["timestamp"]).to eq timestamp.iso8601
