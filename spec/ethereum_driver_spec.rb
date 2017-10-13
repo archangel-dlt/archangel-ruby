@@ -1,13 +1,12 @@
-require "storage_driver_spec"
-
-RSpec.describe Archangel::Driver::Ethereum do
+RSpec.describe Archangel::Driver::EtherStore do 
+#               :vcr => { :cassette_name => "Ethereum" } do
   include_examples "a storage backend" do
     let(:driver) {
-      Archangel::Driver::Ethereum.new(
+      Archangel::Driver::EtherStore.new(
         {
         }
       )
     }
-    let(:annotation) { SecureRandom.hex(10) }
+    let(:annotation) { 'ethereum-2017' }
   end
 end

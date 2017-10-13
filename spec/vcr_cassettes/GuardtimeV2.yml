@@ -1,6 +1,183 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"fish-GuardtimeV2","payload":"halibut","timestamp":"2016-11-02T10:12:59+00:00"},"dataHash":{"value":"TDAy82hS3wKrnBpB6o+wTy43Wuhd7yN2houga2XvlE0=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '198'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 11 Oct 2017 13:39:58 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '327'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"962338dd-aa63-4640-8ab9-7bf7e7de7a9f","createdAt":1507729198250,"createdBy":"ot.vt2ron","metadata":{"id":"fish-GuardtimeV2","payload":"halibut","timestamp":"2016-11-02T10:12:59+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"TDAy82hS3wKrnBpB6o+wTy43Wuhd7yN2houga2XvlE0="}}}}'
+    http_version: 
+  recorded_at: Wed, 11 Oct 2017 13:39:58 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"fruit-GuardtimeV2","payload":"pomelo","timestamp":"2011-03-11T12:34:09+00:00"},"dataHash":{"value":"Y/HEX5ZSlMlo5f/HDV5LibvTUi+Sw+Mb04OwiKXjE0c=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '198'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 11 Oct 2017 13:39:58 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '327'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"6429b1db-03b9-4197-b074-cb8e9c07853b","createdAt":1507729198380,"createdBy":"ot.vt2ron","metadata":{"id":"fruit-GuardtimeV2","payload":"pomelo","timestamp":"2011-03-11T12:34:09+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"Y/HEX5ZSlMlo5f/HDV5LibvTUi+Sw+Mb04OwiKXjE0c="}}}}'
+    http_version: 
+  recorded_at: Wed, 11 Oct 2017 13:39:58 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"corn-based-snack-GuardtimeV2","payload":"frazzles","timestamp":"2015-12-12T12:00:00+00:00"},"dataHash":{"value":"Eq85GDLuVBigY9m5GUsQNCBy1ZNJxaffFYqn8dqC3TY=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '211'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 11 Oct 2017 13:39:58 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '340'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"9d580c8b-9c24-4368-bb36-40b2b33cdf1f","createdAt":1507729198502,"createdBy":"ot.vt2ron","metadata":{"id":"corn-based-snack-GuardtimeV2","payload":"frazzles","timestamp":"2015-12-12T12:00:00+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"Eq85GDLuVBigY9m5GUsQNCBy1ZNJxaffFYqn8dqC3TY="}}}}'
+    http_version: 
+  recorded_at: Wed, 11 Oct 2017 13:39:58 GMT
+- request:
     method: get
     uri: https://tryout-catena-db.guardtime.net/api/v2/signatures?metadata.id=fish-GuardtimeV2
     body:
