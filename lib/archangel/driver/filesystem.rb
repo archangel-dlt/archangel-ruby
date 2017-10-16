@@ -9,7 +9,7 @@ module Archangel
     class Filesystem < Base
 
       def initialize(options = {:root => "."})
-        @root = options[:root]
+        @root = options[:root] || "."
       end
 
       def store(id, payload, timestamp)
