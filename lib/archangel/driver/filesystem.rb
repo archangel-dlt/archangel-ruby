@@ -27,10 +27,10 @@ module Archangel
       end
 
       def fetch(id)
-        Dir["#{@root}/*.json"].each do |file|
+        Dir["#{@root}/*.json"].map do |file|
           data = JSON.parse(File.read(file))
-          break data if data["id"] == id
-        end
+          data["id"] == id ? data : nil
+        end.compact
       end
 
     end

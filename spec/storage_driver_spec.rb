@@ -18,7 +18,7 @@ RSpec.shared_examples "a storage backend" do
 
   it "fetches payload given id", :vcr => { :cassette_name => "#{@cassette_name}-fetch" } do
     data.each do |id, payload, timestamp|
-      read = driver.fetch(id)
+      read = driver.fetch(id)[0]
 
       expect(read["id"]).to eq id
       expect(read["payload"]).to eq payload
