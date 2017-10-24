@@ -19,17 +19,13 @@ module Archangel
 
       def fetch(id)
         gt_ids = gt_search(id)
-
-        result_count = gt_ids['ids'] ? gt_ids['ids'].length : 0
-        if (result_count == 0)
-          raise "No results found for #{id}"
+        return [] unless gt_ids.has_key? 'ids'
+        # Return metadata structs for all content
+        # This probably needs to change to include the
+        # hashes later on.
+        gt_ids['ids'].map do |id|
+          gt_fetch(id)['metadata']
         end
-        if (result_count > 1)
-          raise "Multiple results found for #{id}"
-        end
-
-        result = gt_fetch(gt_ids['ids'][0])
-        result['metadata']
       end # fetch
 
       private
