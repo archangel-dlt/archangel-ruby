@@ -27,7 +27,8 @@ module Archangel
 
       def fetch(id)
         results = @contract.call.fetch(id)
-        JSON.parse(results)
+        parsed = [ JSON.parse(results) ]
+        parsed
       end
 
       # These details come from the archangel-ethereum build output

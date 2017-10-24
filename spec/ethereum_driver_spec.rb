@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 # VCR breaks the fetch, for reasons I can't work out
 # so only run ethereum tests if a local Ethereum REST endpoint
 # is available
+require "securerandom"
 require "net/http"
 require "uri"
 
@@ -13,6 +13,7 @@ rescue
 end
 
 RSpec.describe Archangel::Driver::EtherStore do
+  annotation = SecureRandom.hex(10)
   before {
     if (!endpoint)
       skip("No Ethereum endpoint available")
@@ -26,7 +27,7 @@ RSpec.describe Archangel::Driver::EtherStore do
           }
       )
     }
-    let(:annotation) { SecureRandom.hex(10) }
+    let(:annotation) { annotation }
   end
 end
 
