@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VCR breaks the fetch, for reasons I can't work out
 # so only run ethereum tests if a local Ethereum REST endpoint
 # is available
