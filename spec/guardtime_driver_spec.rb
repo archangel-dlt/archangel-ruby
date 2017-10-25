@@ -1,3 +1,4 @@
+require "spec_helper"
 require "securerandom"
 
 username = ENV['GUARDTIME_user']

@@ -1,7 +1,7 @@
 require "bundler/setup"
 require "archangel"
 require "vcr"
-require "storage_driver_spec"
+require "storage_driver_tests"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

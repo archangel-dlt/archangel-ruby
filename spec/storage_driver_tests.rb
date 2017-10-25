@@ -1,4 +1,3 @@
-require "spec_helper"
 require "date"
 
 RSpec.shared_examples "a storage backend" do
