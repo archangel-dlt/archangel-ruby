@@ -1,0 +1,817 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"fish-GuardtimeV2","payload":"halibut","timestamp":"2016-11-02T10:12:59+00:00"},"dataHash":{"value":"TDAy82hS3wKrnBpB6o+wTy43Wuhd7yN2houga2XvlE0=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '198'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:38 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '327'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"3f45ea30-9109-4e6c-b66e-508cecf25617","createdAt":1507628198638,"createdBy":"ot.vt2ron","metadata":{"id":"fish-GuardtimeV2","payload":"halibut","timestamp":"2016-11-02T10:12:59+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"TDAy82hS3wKrnBpB6o+wTy43Wuhd7yN2houga2XvlE0="}}}}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:38 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"fruit-GuardtimeV2","payload":"pomelo","timestamp":"2011-03-11T12:34:09+00:00"},"dataHash":{"value":"Y/HEX5ZSlMlo5f/HDV5LibvTUi+Sw+Mb04OwiKXjE0c=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '198'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:38 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"259277a7-9c55-4534-b90d-d0b0a9a83e64","createdAt":1507628198772,"createdBy":"ot.vt2ron","metadata":{"id":"fruit-GuardtimeV2","payload":"pomelo","timestamp":"2011-03-11T12:34:09+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"Y/HEX5ZSlMlo5f/HDV5LibvTUi+Sw+Mb04OwiKXjE0c="}}}}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:38 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"corn-based-snack-GuardtimeV2","payload":"frazzles","timestamp":"2015-12-12T12:00:00+00:00"},"dataHash":{"value":"Eq85GDLuVBigY9m5GUsQNCBy1ZNJxaffFYqn8dqC3TY=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '211'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:38 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '340'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"7fd8e89f-a321-4795-8aca-010b15369e82","createdAt":1507628198895,"createdBy":"ot.vt2ron","metadata":{"id":"corn-based-snack-GuardtimeV2","payload":"frazzles","timestamp":"2015-12-12T12:00:00+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"Eq85GDLuVBigY9m5GUsQNCBy1ZNJxaffFYqn8dqC3TY="}}}}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:38 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures?metadata.id=fish-GuardtimeV2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:38 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ids":["3f45ea30-9109-4e6c-b66e-508cecf25617"]}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:39 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures/3f45ea30-9109-4e6c-b66e-508cecf25617
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:39 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '327'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"3f45ea30-9109-4e6c-b66e-508cecf25617","createdAt":1507628198638,"createdBy":"ot.vt2ron","metadata":{"payload":"halibut","id":"fish-GuardtimeV2","timestamp":"2016-11-02T10:12:59+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"TDAy82hS3wKrnBpB6o+wTy43Wuhd7yN2houga2XvlE0="}}}}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:39 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures?metadata.id=fruit-GuardtimeV2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:39 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ids":["259277a7-9c55-4534-b90d-d0b0a9a83e64"]}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:39 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures/259277a7-9c55-4534-b90d-d0b0a9a83e64
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:39 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '327'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"259277a7-9c55-4534-b90d-d0b0a9a83e64","createdAt":1507628198772,"createdBy":"ot.vt2ron","metadata":{"payload":"pomelo","id":"fruit-GuardtimeV2","timestamp":"2011-03-11T12:34:09+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"Y/HEX5ZSlMlo5f/HDV5LibvTUi+Sw+Mb04OwiKXjE0c="}}}}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:39 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures?metadata.id=corn-based-snack-GuardtimeV2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:39 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ids":["7fd8e89f-a321-4795-8aca-010b15369e82"]}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:39 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures/7fd8e89f-a321-4795-8aca-010b15369e82
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:39 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '340'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"7fd8e89f-a321-4795-8aca-010b15369e82","createdAt":1507628198895,"createdBy":"ot.vt2ron","metadata":{"payload":"frazzles","id":"corn-based-snack-GuardtimeV2","timestamp":"2015-12-12T12:00:00+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"Eq85GDLuVBigY9m5GUsQNCBy1ZNJxaffFYqn8dqC3TY="}}}}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:39 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"software-tools-in-pascal-GuardtimeV2","payload":"PJ
+        Plauger","timestamp":"1944-01-13T00:00:00+00:00"},"dataHash":{"value":"0W+fMOUe4YfaNVBzS2s1J02su7AECTLMGPE3bHz73w0=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '221'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:51 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"63f3592a-ecca-4288-ba94-dca73322621f","createdAt":1508939751370,"createdBy":"ot.vt2ron","metadata":{"id":"software-tools-in-pascal-GuardtimeV2","payload":"PJ
+        Plauger","timestamp":"1944-01-13T00:00:00+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"0W+fMOUe4YfaNVBzS2s1J02su7AECTLMGPE3bHz73w0="}}}}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:51 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"software-tools-in-pascal-GuardtimeV2","payload":"Brian
+        Kernighan","timestamp":"1942-01-01T00:00:00+00:00"},"dataHash":{"value":"nAZZTU1LHTXlvXEyBQGW8FX3L+xzxXxzoid6e9ZvzD0=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '226'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:52 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '355'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"27820175-8a0c-43f7-886e-523fe22622ee","createdAt":1508939752649,"createdBy":"ot.vt2ron","metadata":{"id":"software-tools-in-pascal-GuardtimeV2","payload":"Brian
+        Kernighan","timestamp":"1942-01-01T00:00:00+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"nAZZTU1LHTXlvXEyBQGW8FX3L+xzxXxzoid6e9ZvzD0="}}}}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:52 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures?metadata.id=software-tools-in-pascal-GuardtimeV2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:52 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '87'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ids":["27820175-8a0c-43f7-886e-523fe22622ee","63f3592a-ecca-4288-ba94-dca73322621f"]}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:52 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures/27820175-8a0c-43f7-886e-523fe22622ee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:52 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"27820175-8a0c-43f7-886e-523fe22622ee","createdAt":1508939752649,"createdBy":"ot.vt2ron","metadata":{"payload":"Brian
+        Kernighan","id":"software-tools-in-pascal-GuardtimeV2","timestamp":"1942-01-01T00:00:00+00:00"},"signature":{"status":"PENDING","details":{"dataHash":{"algorithm":"SHA-256","value":"nAZZTU1LHTXlvXEyBQGW8FX3L+xzxXxzoid6e9ZvzD0="}}}}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:52 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v2/signatures/63f3592a-ecca-4288-ba94-dca73322621f
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:52 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3407'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"63f3592a-ecca-4288-ba94-dca73322621f","createdAt":1508939751370,"createdBy":"ot.vt2ron","metadata":{"payload":"PJ
+        Plauger","id":"software-tools-in-pascal-GuardtimeV2","timestamp":"1944-01-13T00:00:00+00:00"},"signature":{"status":"SIGNED","details":{"dataHash":{"algorithm":"SHA-256","value":"0W+fMOUe4YfaNVBzS2s1J02su7AECTLMGPE3bHz73w0="},"aggregationTime":1508939752000,"identity":[{"clientId":"GT","machineId":"ANe2:0","sequenceNumber":7,"requestTime":1508939752351262},{"clientId":"GT","machineId":"ASe2-0:1","sequenceNumber":5,"requestTime":1508939752340906},{"clientId":"GT","machineId":"ALe2-1-2:8","sequenceNumber":4,"requestTime":1508939751948628},{"clientId":"katja","machineId":"katja:1","sequenceNumber":0,"requestTime":1508939751815963},{"clientId":"ot.vt2ron","sequenceNumber":0}]},"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]},"ksiSignature":"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"}}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:53 GMT
+recorded_with: VCR 3.0.3
