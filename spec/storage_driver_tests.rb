@@ -1,4 +1,3 @@
-require "spec_helper"
 require "date"
 
 RSpec.shared_examples "a storage backend" do
@@ -20,10 +19,29 @@ RSpec.shared_examples "a storage backend" do
     data.each do |id, payload, timestamp|
       read = driver.fetch(id)[0]
 
-      expect(read).to_not be_nil
       expect(read["id"]).to eq id
       expect(read["payload"]).to eq payload
       expect(read["timestamp"]).to eq timestamp.iso8601
+    end
+  end
+
+  it "store multiple payloads against the same id" do
+    id = "software-tools-in-pascal-#{annotation}"
+    values = [
+        ["PJ Plauger", DateTime.parse("1944-01-13")],
+        ["Brian Kernighan", DateTime.parse("1942-01-01")]
+    ]
+    values.each do |payload, timestamp|
+      driver.store(id, payload, timestamp)
+    end
+
+    read = driver.fetch(id)
+    expect(read).to_not be_nil
+    expect(read).to be_instance_of Array
+    expect(read.length).to eq 2
+    values.each_index do |i|
+      expect(read[i]["payload"]).to eq values[1-i][0]
+      expect(read[i]["timestamp"]).to eq values[1-i][1].iso8601
     end
   end
 end

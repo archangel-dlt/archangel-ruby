@@ -1,3 +1,4 @@
+require "spec_helper"
 require "securerandom"
 
 username = ENV['GUARDTIME_user']
@@ -11,10 +12,11 @@ password ||= "password"
 
 [ Archangel::Driver::Guardtime, Archangel::Driver::GuardtimeV2 ].each do |gt_class|
   name = gt_class.name.split('::').last
+  vcr_opts = use_vcr ? { :cassette_name => "#{name}", :record => :new_episodes } : nil
   annotation = use_vcr ? name : SecureRandom.hex(10)
 
   RSpec.describe "#{gt_class.name} #{tag}",
-                 :vcr => { :cassette_name => "#{name}" } do
+                 :vcr => vcr_opts do
     include_examples "a storage backend" do
       let(:driver) {
         gt_class.new(
