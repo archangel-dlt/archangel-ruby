@@ -26,17 +26,23 @@ module Archangel
       end
 
       def fetch(id)
-        results = @contract.call.fetch(id)
-        parsed = [ JSON.parse(results) ]
+        payload, prev = @contract.call.fetch(id)
+        parsed = [ JSON.parse(payload) ]
+
+        while (prev != '') do
+          payload, prev = @contract.call.fetch_previous(prev)
+          parsed.push(JSON.parse(payload))
+        end
+
         parsed
       end
 
       # These details come from the archangel-ethereum build output
       # The contract is deployed on the Rinkeby test net
       # see https://rinkeby.etherscan.io/address/0x7e9dc20bc8fb81d92305429924f9c0bff6ab9292
-      @@contract_address = "0x7e9dc20bc8fb81d92305429924f9c0bff6ab9292"
+      @@contract_address = "0x40aa476f8ae7105d9094e8293b633273c085a3d5"
       @@abi_definition = <<END_ABI
-  [
+[
     {
       "constant": false,
       "inputs": [
@@ -47,6 +53,28 @@ module Archangel
       ],
       "name": "grantPermission",
       "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "fetchPrevious",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
       "payable": false,
       "type": "function"
     },
@@ -81,6 +109,10 @@ module Archangel
         {
           "name": "",
           "type": "string"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
         }
       ],
       "payable": false,
@@ -149,20 +181,8 @@ module Archangel
       ],
       "name": "NoWritePermission",
       "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "_key",
-          "type": "string"
-        }
-      ],
-      "name": "DuplicateKey",
-      "type": "event"
     }
-  ]
+]
 END_ABI
     end
   end
