@@ -29,7 +29,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "thor", "~> 0.20"
   spec.add_dependency "rest-client", "~> 2.0.2"
-  
+  #spec.add_dependency "ethereum.rb", "~> 2.1.7"
+  #until next release, using Github source specified in Gemfile
+
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"

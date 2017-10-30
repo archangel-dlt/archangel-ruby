@@ -1,0 +1,540 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"fish-Guardtime","payload":"halibut","timestamp":"2016-11-02T10:12:59+00:00"},"dataHash":{"value":"uZ9yD+FVAxVsyzfvca8I/XwZ4kc9g+JSHmrfyq0btkk=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '196'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 11 Oct 2017 13:39:56 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3158'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"33efd482-2fe4-4eaa-b0c6-1123b70f74d1","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"uZ9yD+FVAxVsyzfvca8I/XwZ4kc9g+JSHmrfyq0btkk="},"aggregationTime":1507729195000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"id":"fish-Guardtime","payload":"halibut","timestamp":"2016-11-02T10:12:59+00:00"},"createdBy":"ot.vt2ron","createdAt":1507729196078,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}'
+    http_version: 
+  recorded_at: Wed, 11 Oct 2017 13:39:56 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"fruit-Guardtime","payload":"pomelo","timestamp":"2011-03-11T12:34:09+00:00"},"dataHash":{"value":"oMiqLVRzlswt0fyJ9o32q4Hk4eQDfnl3CEfJeot4xbs=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '196'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 11 Oct 2017 13:39:57 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3062'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"196c2e6a-1b5c-4518-8837-d55568c295c3","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"oMiqLVRzlswt0fyJ9o32q4Hk4eQDfnl3CEfJeot4xbs="},"aggregationTime":1507729196000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"id":"fruit-Guardtime","payload":"pomelo","timestamp":"2011-03-11T12:34:09+00:00"},"createdBy":"ot.vt2ron","createdAt":1507729197083,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}'
+    http_version: 
+  recorded_at: Wed, 11 Oct 2017 13:39:57 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"corn-based-snack-Guardtime","payload":"frazzles","timestamp":"2015-12-12T12:00:00+00:00"},"dataHash":{"value":"QzSpQavG+1NXQgjR5NovvqfTRbZaEBh7ANlWRybXJKg=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '209'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 11 Oct 2017 13:39:58 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3127'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"7bb82bf8-a0de-4c89-b8ad-32e8f117673b","signature":"iAAHpIgBAFQCBFneHy0DAQwDAS8DAQsDAQcDAQMDAQMFIQFDNKlBq8b7U1dCCNHk2i++p9NFtloQGHsA2VZHJtckqAYBAQcUAQAEEH4CAQEBCm90LnZ0MnJvbgCIAQBfAgRZ3h8tAwEMAwEvAwELAwEHAwEDBSEBdbKZrAI/lwCmqhpApkQNAv+oaLssP3cX1QbshM/sGfgGAQEHIgQgfgEBYQZrYXRqYQBiCGthdGphOjEAYwBkBwVbRY85GluIAQCGAgRZ3h8tAwEMAwEvAwELAwEHBSEBTN+Pp6Sj2g1sozs83LvABhD6pI5N6BKI6zfRk1pESf0GAQEHJAQifgIBAWEDR1QAYgtBTGUyLTEtMjo3AGMBBGQHBVtFjzyzyAcmAQEBAiEBPMX3IQqD/TrPe4XQ1oq/THcgLzIuIe34lgKpQnkgYuKIAQCmAgRZ3h8tAwEMAwEvAwELBSEBPtknvJ6A1mfrBWx9AiZGFPAU7b94Lyxdo9F9eUTY2kAGAQEHIgQgfgIBAWEDR1QAYglBU2UyLTA6MABjAQFkBwVbRY9CpFAHJgEBAQIhAVHiqpTer1oeyQ92Gk5SS7CncWap633tbJpyYDFjqrwTCCMCIQHj8Jo45pSFpf5Eg6Ki0JtwvcJMiioVru2DzdK7UoJ7yogBAOgCBFneHy0DAQwDAS8FIQFCY/w3sD8bLRwevMLl5cwAxXusl70Kvr/3+KY2NfFl2QYBAQcgBB5+AgEBYQNHVABiB0FOZTI6MQBjAR5kBwVbRY9DLxkHIwIhAT5Nez18YXjkg/gcGerks+az0Iugo4J4s0RMY9pWaV2wByMCIQFPRh/J8tpUdNWbsQmbn0E8PqTVMpYX7cS8n4W0BFMluQcjAiEBk9a/7LSt5k6+YHsEOFIK+RvKyKsBYzNMvBfrUD+xEqQIIwIhAddQ3030fYr33vLTzYb+6CI+ALjmGF6I/AKJ7BysigDGiAEApAIEWd4fLQMBDAUhAQY/zdQ9ACTPI4HdmiF6oNveU6uyljOfvntc+Eb+WtrVBgEBCCYBAUMCIQEoF719hA7TOay1IhhGTLq22It5Qegg0keh6YkqBnUvcAgmAQEtAiEBOCup//1JO1GdkVcswSNbRTZJleMT5XB1df7hCV77QeQHIwIhAQjKNC/50kGxOVSQbkI0xBvQMC29Od5f/IUgPBmHlWiDiAICyAEEWd4fLQIEWd4fLQUhARVfAl3S6fzp3AHaffg7pDbQ5Lc4OwQ+TaOK9k0Qgxk9CCEBNNl//No+vOTkZo2YSKbPblY0z551DJd7GNlP5Rvq6BgIIQFCMdogdYAh6iKZNeqt4aD3AtlEXo/Dmy7GVaX+KyXQ3QghAZMwLl2yhzQR6tR9C91QfJGwD/q/hVKo0dV2YwL4MWM8CCEB/Bpll3UNykLPkfvb7MAKFkFCW6KfYPcJ9aO/ezkZ9WAIIQHpHlS+dKEELcgmtxZZFtTqfchVM8ChsNHzMv3xGyxcxwghAXr1VzN96DRDX8Cks1Er0cLIB6/e5lTn39wgEBBEF9fRCCEBbA9pbmANIeYn+Wm2aUjHBg52+GB0vwwBvYXwxa0KKA4IIQF/moujFiaYXm8kDiioXWhfZIlUGgRvPiMrotK5YeNE3QghAX+RqqkyG2JM7/RjfgRwtDGqZMgJIzw3WSz5ySOzMylhCCEBUJ/VXMHXXTxMHj7asmrNEnjtQZ8uvXRMhpNUHFT/Xa8IIQFrIemrylL3bymr4o7/Rbr+31sYbETfso4J+G/xfEvvpAghAW7GEz/yCwd8uJ6UraGltp9Oi6Y9qKt/fsV39VQXD6FrCCEBiKCH0wOaqAEpufZapyeGFBiAtALufuQbs+Yoq9SVSXUIIQGRaXXchxirIZ/WF9C4xLMrys8fhSHuWIyDp8rkc+zmcgghAX8Rd9WJ9Io47Oq4MzkrawaWcf6/TZotuEGBiF3mbi/XCCEB4P1snScIJIcW619pu5R1kkGNXwfnjwFSnl50Kk6cYa0IIQHrw6sdhmQVgRMKw8cHe3G2e7pMkVUw6f5JuYdp/I3K6wghAUlvwBINhU51NLmSqzLsMEWyDUvuG/vkVk/Qks6voItyCCEBu0T9NqXzze57XG3zpgmKCeNTM1tgKfFHdQJYin43vgCIBQFRMCkCBFneHy0EIQHZ7mS4RSA6W4dKoCMkvXHReCwGb3evaG81fGhaDVRNGIALASIBFjEuMi44NDAuMTEzNTQ5LjEuMS4xMQCAAgEArTk7lQhIk2sAl9FPyHeZpjMDgzRHytnOIKF2Sf+yNZmvs3tQrFGRODgT0l3gaEeugaApS5LtlVWRVGSOO8yCb4HNgh64gGmANF/zaWPqrWXzCVGzWYSgcSOBixqV4qVPqL9gLMG86W4KspAlmUoo7ZQfLKMH7KOGV9W0QHr8erBw1PRzQ5S36xot94qQRM+1Go0bQWuSO6WX5B1n4Cv7cWoc1TYVZB5GAhWOZWKscKcoUGcn42QKAMd1R8mby3qyM0sI4bLuFoX5ebyNzUKDvrPyVLJl8y3DO+7wdDgMbnZM2h7G4dxhPgSiLVAjAgkKHnBwVvtzVb7SUIftejFEPwMEWu3dNQ==","details":{"dataHash":{"algorithm":"SHA-256","value":"QzSpQavG+1NXQgjR5NovvqfTRbZaEBh7ANlWRybXJKg="},"aggregationTime":1507729197000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"id":"corn-based-snack-Guardtime","payload":"frazzles","timestamp":"2015-12-12T12:00:00+00:00"},"createdBy":"ot.vt2ron","createdAt":1507729198096,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}'
+    http_version: 
+  recorded_at: Wed, 11 Oct 2017 13:39:58 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures?metadata.id=fish-Guardtime
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:38 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3185'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"content":[{"id":"b9240aae-1e16-42c8-8c33-2055eeb29755","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"uZ9yD+FVAxVsyzfvca8I/XwZ4kc9g+JSHmrfyq0btkk="},"aggregationTime":1507628195000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"payload":"halibut","id":"fish-Guardtime","timestamp":"2016-11-02T10:12:59+00:00"},"createdBy":"ot.vt2ron","createdAt":1507628196097,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}],"last":true,"totalPages":1,"totalElements":1,"sort":[{"direction":"DESC","property":"createdAt"}],"first":true,"numberOfElements":1,"size":20,"number":0}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:38 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures?metadata.id=fruit-Guardtime
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:38 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3089'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"content":[{"id":"de4a974a-80c3-4354-8144-5a788377ecb5","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"oMiqLVRzlswt0fyJ9o32q4Hk4eQDfnl3CEfJeot4xbs="},"aggregationTime":1507628196000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"payload":"pomelo","id":"fruit-Guardtime","timestamp":"2011-03-11T12:34:09+00:00"},"createdBy":"ot.vt2ron","createdAt":1507628197095,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}],"last":true,"totalPages":1,"totalElements":1,"sort":[{"direction":"DESC","property":"createdAt"}],"first":true,"numberOfElements":1,"size":20,"number":0}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:38 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures?metadata.id=corn-based-snack-Guardtime
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 10 Oct 2017 09:36:38 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3198'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"content":[{"id":"1d5e99c5-7ecb-41dc-8641-23178ee8f165","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"QzSpQavG+1NXQgjR5NovvqfTRbZaEBh7ANlWRybXJKg="},"aggregationTime":1507628197000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"payload":"frazzles","id":"corn-based-snack-Guardtime","timestamp":"2015-12-12T12:00:00+00:00"},"createdBy":"ot.vt2ron","createdAt":1507628198101,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}],"last":true,"totalPages":1,"totalElements":1,"sort":[{"direction":"DESC","property":"createdAt"}],"first":true,"numberOfElements":1,"size":20,"number":0}'
+    http_version: 
+  recorded_at: Tue, 10 Oct 2017 09:36:38 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"software-tools-in-pascal-Guardtime","payload":"PJ
+        Plauger","timestamp":"1944-01-13T00:00:00+00:00"},"dataHash":{"value":"F4JhqmNNvVrZ0icrPv6oSTAUxzw0XXMA7WOmeqgEei0=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '219'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:10 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3181'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"b7f105de-4743-4c37-b804-983bb9e14138","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"F4JhqmNNvVrZ0icrPv6oSTAUxzw0XXMA7WOmeqgEei0="},"aggregationTime":1508939709000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"id":"software-tools-in-pascal-Guardtime","payload":"PJ
+        Plauger","timestamp":"1944-01-13T00:00:00+00:00"},"createdBy":"ot.vt2ron","createdAt":1508939710078,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:10 GMT
+- request:
+    method: post
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"id":"software-tools-in-pascal-Guardtime","payload":"Brian
+        Kernighan","timestamp":"1942-01-01T00:00:00+00:00"},"dataHash":{"value":"dMIf+P8Zd63jC21G5oBZv99p7h7rVxn4oCuXo+2hw0M=","algorithm":"SHA-256"},"level":0}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '224'
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:18 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '3046'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"e80bc7a3-ee63-44e8-a7e4-72df00491592","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"dMIf+P8Zd63jC21G5oBZv99p7h7rVxn4oCuXo+2hw0M="},"aggregationTime":1508939717000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"id":"software-tools-in-pascal-Guardtime","payload":"Brian
+        Kernighan","timestamp":"1942-01-01T00:00:00+00:00"},"createdBy":"ot.vt2ron","createdAt":1508939718073,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:18 GMT
+- request:
+    method: get
+    uri: https://tryout-catena-db.guardtime.net/api/v1/signatures?metadata.id=software-tools-in-pascal-Guardtime
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.0p0
+      Content-Type:
+      - application/json
+      Host:
+      - tryout-catena-db.guardtime.net
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, authorization, accept, client-security-token
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, DELETE, PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Oct 2017 13:55:25 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Server:
+      - Apache/2.4.6 (CentOS)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '6395'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"content":[{"id":"e80bc7a3-ee63-44e8-a7e4-72df00491592","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"dMIf+P8Zd63jC21G5oBZv99p7h7rVxn4oCuXo+2hw0M="},"aggregationTime":1508939717000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"payload":"Brian Kernighan","id":"software-tools-in-pascal-Guardtime","timestamp":"1942-01-01T00:00:00+00:00"},"createdBy":"ot.vt2ron","createdAt":1508939718073,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}},{"id":"b7f105de-4743-4c37-b804-983bb9e14138","signature":"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","details":{"dataHash":{"algorithm":"SHA-256","value":"F4JhqmNNvVrZ0icrPv6oSTAUxzw0XXMA7WOmeqgEei0="},"aggregationTime":1508939709000,"identity":"GT
+        :: GT :: GT :: katja :: ot.vt2ron"},"metadata":{"payload":"PJ Plauger","id":"software-tools-in-pascal-Guardtime","timestamp":"1944-01-13T00:00:00+00:00"},"createdBy":"ot.vt2ron","createdAt":1508939710078,"verificationResult":{"status":"OK","policyResults":[{"policyResultCode":"OK","policy":"KEY_BASED_POLICY"}]}}],"last":true,"totalPages":1,"totalElements":2,"sort":[{"direction":"DESC","property":"createdAt"}],"first":true,"numberOfElements":2,"size":20,"number":0}'
+    http_version:
+  recorded_at: Wed, 25 Oct 2017 13:55:25 GMT
+recorded_with: VCR 3.0.3

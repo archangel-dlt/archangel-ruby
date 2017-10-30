@@ -1,4 +1,4 @@
-require "storage_driver_spec"
+require "spec_helper"
 
 RSpec.describe Archangel::Driver::Filesystem do
   filestore = "./test_run"
