@@ -30,7 +30,7 @@ module Archangel
         Dir["#{@root}/*.json"].map do |file|
           data = JSON.parse(File.read(file))
           data["id"] == id ? data : nil
-        end.compact.reverse
+        end.compact.sort_by! { |o| o["timestamp"] }
       end
 
     end
